@@ -1,9 +1,94 @@
-body {
+@font-face {
+    font-family: Gotham;
+    src: url(/fonts/gotham.ttf);
+}
+
+
+@font-face {
+    font-family: Minion;
+    src: url(/fonts/MinionPro-Regular.otf);
+}
+
+
+body,html {
+	color: #5c6b7e;
+  background: #dddddd;
   padding: 50px;
   text-align: center;
-  font: 14px Helvetica, Arial, sans-serif;
+  font-family: "Lato";
+
+}
+
+h1{
+	font-family: "Lato";
+	letter-spacing: 3px;
+
 }
 
 a {
   color: #00B7FF;
 }
+
+#headcontainter{
+	width: 100%;
+	text-align: center;
+}
+
+
+/*button*/
+
+button {
+  display: block;
+  height: 50px;
+  padding: 0;
+  width: 170px;
+  background: none;
+  margin: auto;
+  border: 1px solid #38ceae;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  font-family: "Lato";
+  color: #1ECD97;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-transition: background 0.4s, color 0.4s, font-size 0.05s, width 0.4s, border 0.4s;
+  -o-transition: background 0.4s, color 0.4s, font-size 0.05s, width 0.4s, border 0.4s;
+  -webkit-transition: background 0.4s, color 0.4s, font-size 0.05s, width 0.4s, border 0.4s;
+  transition: background 0.4s, color 0.4s, font-size 0.05s, width 0.4s, border 0.4s;
+}
+button:hover {
+  background: #38ceae;
+  color: white;
+}
+
+/* form */
+
+form {
+ position: relative;
+ top: 20px;
+ border-radius: 4px;
+ width: 400px;
+ height: 180px;
+ margin: 0 auto;
+}
+
+form textarea {
+	padding:10px;
+ border-radius: 10px;
+ box-shadow:  0px 2px 11px 0px rgba(0, 0, 0, 0.3);
+ border: 1px solid #e2e6e6;
+ margin: 10px 0 20px 0;
+ font-size: 14px;
+ font-family: 'Lato', sans-serif;
+ outline: none;
+ width: 395px;
+ height: 200px;
+}
+
