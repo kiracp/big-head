@@ -8,7 +8,7 @@ countDict = {"me":0, "my":0, "i":0, "mine":0, "myself":0,
              "you":0, "your":0, "yours":0, "yourself":0, "y'all":0}
 lyricfile = sys.stdin.readline()
 words = lyricfile.split()
-for word.lower() in words:
+for word in words:
     if "'" in word:
         word = word[:word.index("'")]
     if word in countDict:

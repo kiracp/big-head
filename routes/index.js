@@ -8,31 +8,29 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/data', function(req,res,next){
-	console.log('this ishappening');
- // res.render('index', { title: 'How Big Is Your Head?' });
+
 	// Get form body here
 	var pyshell = new PythonShell('counter.py', {scriptPath:"./", pythonOptions: ['-u']});
 	var generated = req.body.song;
-	console.log(generated);
 
 	pyshell.send(generated).end(function(err){
 		if (err) throw err;
 		console.log('finished');
 	})
 
-var output = '';
+	var output = '';
 		// Message is whatever is printed by the python function
-		pyshell.on('message', function (message) {		  
+	pyshell.on('message', function (message) {		  
+			console.log(message);
+		  output_array = message.split(' * ');
+		  for (i = 0; i < output_array.length; i++) {
+		  	output += output_array[i] + "<br>";
+		  }
 
-		  	output_array = message.split(' * ');
-		  	console.log(output_array);
-		  	for (i = 0; i < output_array.length; i++) {
-		  		output += output_array[i] + "<br>";
-		  	}
-		  	console.log(output);
-		  	res.render('data', {title: "Data"});
+		  console.log(output);
+		  res.render('data', {title: "Data"});
 		  
-		});
+	});
 
 });
 
