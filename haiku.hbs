@@ -1,0 +1,72 @@
+
+<head>
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/sticky-footer.css" rel="stylesheet">
+</head>
+
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="nlp" href="/">AIT Final</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+
+            <li><a href="/">Home</a></li>
+            <li><a href="/bagels">Bagel Tracker</a></li>
+            <li><a href="/haiku">Haiku Generator</a></li>
+            <li><a href="/bobst">Where Can I Print In Bobst?</a></li>
+
+            <li class="dropdown">
+              <a href="/ait" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">AIT Projects<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/ait/birds">Busy Birder</a></li>
+                <li><a href="/ait/matchicode">Matchicode</a></li>
+                <!--<li><a href="/ait/list">Shoppy Shopperson</a></li>
+                <li><a href="/ait/movies">MoviesDB</a></li> -->
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="page-header" id="page-header">
+        <h1>{{title}}</h1>
+      </div>
+        <div class="row">
+            <div class="alert alert-warning" id="alert">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      {{alert}}
+      </div>
+        <div class="col-md-5">
+          <h3>Input text here:</h3>
+          <p>Input should be a long text file. The longer the better! News articles, essays and long emails make great haikus.</p>
+          <form method="POST" action="" id="haiku-form" >
+           <textarea name="haiku" form="haiku-form" class="form-control" rows="7"></textarea><br>
+            <input type="submit" class="btn btn-primary btn-lg"  >
+           
+          </form>
+
+        </div>
+        
+        <div class="col-md-5" >
+          <div id="haiku" >
+            <br><br>
+            <p style="text-align:center; font-size:1.6em; font-style:italic" >
+            {{{haiku}}}
+            </p>
+          </div>
+       </div>
+       </div>
+    </div>
+    
+<script src="/javascripts/alert.js"></script>
