@@ -1,12 +1,12 @@
 import json
+import sys
 countDict = {"me":0, "my":0, "I":0, "mine":0, "myself":0,
              "she":0, "her":0, "hers":0, "herself":0,
              "he":0, "him":0, "his":0, "himself":0,
              "they":0, "them":0, "their":0, "themselves":0,
              "we":0, "us":0, "our":0, "ours":0, "ourselves":0,
              "you":0, "your":0, "yours":0, "yourself":0, "y'all":0}
-f = open("test.txt", "r")
-lyricfile = f.read()
+lyricfile = sys.stdin.readline();
 words = lyricfile.split()
 for word in words:
     if word in countDict:

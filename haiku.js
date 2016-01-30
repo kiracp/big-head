@@ -10,9 +10,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
+	console.log('hey');
 	// Get form body here
 	var pyshell = new PythonShell('driver.py', {scriptPath:"./haiku-generator/", pythonOptions: ['-u']});
-	var generated = req.body.haiku;
+	var generated = req.body.song;
 
 	// Strip newline characters, etc
 	generated = generated.replace(/(\r\n|\n|\r|\t)/gm,"");
