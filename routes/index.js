@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'How Big Is Your Head?' });
 });
 
-router.post('/', function(req,res,next){
+router.post('/data', function(req,res,next){
 	console.log('this ishappening');
  // res.render('index', { title: 'How Big Is Your Head?' });
 	// Get form body here
@@ -30,7 +30,7 @@ var output = '';
 		  		output += output_array[i] + "<br>";
 		  	}
 		  	console.log(output);
-		  	res.render('index', {title: "Data"});
+		  	res.render('data', {title: "Data"});
 		  
 		});
 
