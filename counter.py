@@ -8,7 +8,7 @@ countDict = {"me":0, "my":0, "i":0, "mine":0, "myself":0,
              "you":0, "your":0, "yours":0, "yourself":0, "y'all":0}
 lyricfile = sys.stdin.readline()
 words = lyricfile.split()
-for word.lower() in words:
+for word in words:
     if "'" in word:
         word = word[:word.index("'")]
     if word in countDict:
@@ -21,12 +21,4 @@ third_person_f = countDict["she"] + countDict["her"] + countDict["hers"] + count
 third_person_m = countDict["he"] + countDict["him"] + countDict["his"] + countDict["himself"]
 third_person_plural = countDict["they"] + countDict["them"] + countDict["their"] + countDict["themselves"]
 
-print(json.dumps(countDict))
-
-
-print("first person singular: ", first_person)
-print("first person plural: ", first_person_plural)
-print("second person: ", second_person)
-print("third person feminine: ", third_person_f)
-print("third person masculine: ", third_person_m)
-print("third person plural: ", third_person_plural)
+print countDict
