@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'How Big Is Your Head?' });
 });
 
+router.get('/data', function(req,res,next){
+  res.render('data');
+});
+
 module.exports = router;
