@@ -1,0 +1,1 @@
+{"y'all": 0, "mine": 0, "yourself": 0, "himself": 0, "our": 0, "ourselves": 0, "her": 0, "your": 0, "their": 0, "ours": 0, "themselves": 0, "we": 6, "his": 0, "I": 2, "you": 6, "them": 0, "they": 0, "hers": 0, "herself": 0, "him": 0, "he": 0, "me": 3, "myself": 0, "us": 3, "she": 0, "my": 2, "yours": 0}
