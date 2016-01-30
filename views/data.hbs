@@ -72,6 +72,35 @@
   }
 }
 
+path {  stroke: #fff; }
+path:hover {  opacity:0.9; }
+rect:hover {  fill:#fd6955; }
+.axis {  font: 10px sans-serif; }
+.legend tr{    border-bottom:1px solid grey; }
+.legend tr:first-child{    border-top:1px solid grey; }
+
+.axis path,
+.axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {  display: none; }
+.legend{
+    margin-bottom:76px;
+    display:inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+.legendFreq, .legendPerc{
+    align:right;
+    width:50px;
+}
+
 </style>
 <h1>{{title}}</h1>
 
@@ -95,4 +124,13 @@
 
   {{body}}
 
-  <a href = "/"> Submit Another Song </a>
+
+<div id='dashboard'>
+</div>
+  <button> <a href="/"> Another Song! </button>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="/javascripts/paint.js"></script>
+<script src="/javascripts/data.js"></script>
+
+
