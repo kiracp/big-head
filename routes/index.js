@@ -71,14 +71,9 @@ router.post('/data', function(req,res,next){
 		console.log(total1s);
 
 		var ratio = (total1s + 0.0)/total;
-		console.log(ratio )
+		console.log(ratio);
 
-
-
-		var big = false;
-
-
-		res.render('data', {title: "Data", body: newArray});
+		res.render('data', {title: "Data", body: "Your big head ratio is: " + ratio});
 		  
 	});
 
