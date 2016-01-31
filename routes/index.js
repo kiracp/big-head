@@ -71,7 +71,7 @@ router.post('/data', function(req,res,next){
 		console.log(total1s);
 
 		var ratio = (total1s + 0.0)/total;
-		ratio = ratio*100;
+		ratio = (ratio*100).toFixed(2);
 
 		var message = "";
 
