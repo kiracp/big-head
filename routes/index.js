@@ -71,9 +71,28 @@ router.post('/data', function(req,res,next){
 		console.log(total1s);
 
 		var ratio = (total1s + 0.0)/total;
-		console.log(ratio);
+		ratio = ratio*100;
 
-		res.render('data', {title: "Data", body: "Your big head ratio is: " + ratio});
+		var message = "";
+
+
+		if (ratio > 50){
+			message = "You have a pretty big head!";
+		}
+
+		else if (ratio <50 && ratio >30){
+			message = "Your head is medium sized";
+		}
+
+		else if (ratio <30){
+			message = "Your head is teeny tiny!";
+		}
+		else{
+			message = "Invalid input!";	
+			ratio = 0;
+		}
+
+		res.render('data', { point: "Your big head ratio is: " + ratio + "%", headSize: ratio*8, title: message, ratio: ratio});
 		  
 	});
 

@@ -29,9 +29,17 @@ a {
   color: #00B7FF;
 }
 
-#headcontainter{
-	width: 100%;
+#headcontainer{
+  padding-left:10%;
+	width: 50%;
+  float: left;
 	text-align: center;
+}
+
+#messagecontainer{
+  width: 40%;
+  float: left;
+  font-size:30px;
 }
 
 

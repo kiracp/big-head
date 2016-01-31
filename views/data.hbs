@@ -1,7 +1,7 @@
 <style>
 
 .head {
- margin-left: 42%;
+ margin-left: {{ratio}}/4%;
   margin-top: 20px;
   position: relative;
   width: 160px;
@@ -10,8 +10,8 @@
   position: relative;
   top: 0;
   background: #5191e1;
-  width: 160px;
-  height: 200px;
+  width: {{headSize}}px;
+  height: {{headSize}}px;
   border-radius: 100% 100% 95% 95%;
 }
 .face .ears .left,
@@ -121,8 +121,9 @@ rect:hover {  fill:#fd6955; }
   </div>
 </div>
 </div>
-
-  {{body}}
+<div id = "messagecontainer">
+  {{point}}
+  </div>
 
 
 <div id='dashboard'>
