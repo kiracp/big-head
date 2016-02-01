@@ -1,7 +1,7 @@
 # How Big is Your Head?
 App for Monthly Music Hackathon's Language and Lyric Hackathon (Jan. 2016). The purpose of this app is to measure narcissm given an inputted song.
 
-##Setup
+###Setup
 This app uses Node.js, d3.js, python
 
 ### Run this locally
